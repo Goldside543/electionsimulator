@@ -50,6 +50,7 @@ class Election {
         
         System.out.println("1. " + candidate1.name + " (" + candidate1.party + ")");
         System.out.println("2. " + candidate2.name + " (" + candidate2.party + ")");
+        System.out.println("3. Don't vote");
 
         System.out.println("\nEnter your vote (1 for " + candidate1.name + ", 2 for " + candidate2.name + "): ");
         int playerVote = scanner.nextInt();
@@ -60,6 +61,8 @@ class Election {
         } else if (playerVote == 2) {
             candidate2.addVotes(1);
             System.out.println("You voted for " + candidate2.name);
+        } else if (playerVote == 3) {
+            System.out.println("Didn't vote");
         } else {
             System.out.println("Invalid vote!");
             return;
